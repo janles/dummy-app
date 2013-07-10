@@ -348,6 +348,11 @@ public class RegisterActivity extends Activity implements DataListener,
 				etaView.setText("ETA: " + msg.eta);
 			}
 
+			// eigenen Anruf-Button ausblenden
+			if (msg.name.equals("Ich")) {
+				button_anruf.setVisibility(View.INVISIBLE);
+			}
+
 			// Info-Button implementieren
 			button_info.setOnClickListener(new View.OnClickListener() {
 
